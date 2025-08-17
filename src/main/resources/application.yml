@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  thymeleaf:
+    enabled: false
+  application:
+    name: foco
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/XEPDB1
+    username: FOCO
+    password: foco123
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    properties:
+      hibernate:
+        bytecode:
+          provider: none
+      ddl-auto: none
+
+    open-in-view: false
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
